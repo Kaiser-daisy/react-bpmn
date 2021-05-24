@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "bpmnlint:recommended",
+    "plugin:playground/all"
+  ],
+  "rules": {
+     "playground/label-required": "error",
+      "playground/end-event-required": "error",
+      "playground/start-event-required": "error",
+      "playground/no-node-user": "error",
+      "playground/no-disconnected": "error",
+      "playground/no-implicit-split": "warn",
+      "playground/conditional-flows": "error",
+     "label-required": "off",
+     "start-event-required": "off",
+     "end-event-required": "off",
+     "no-disconnected": "off",
+     "no-implicit-split": "off",
+     "conditional-flows": "off"
+  }
+}

@@ -1,0 +1,189 @@
+.processContainer {
+  display: flex;
+  height: calc(~'80vh - 200px');
+  .bpmnContainer {
+    flex: 1;
+    height: 100%;
+    background: url('~@/assets/bg.svg') #fff !important;
+  }
+  .aside {
+    width: 325px;
+    min-width: 325px;
+    margin-left: 10px;
+    .panelContainer {
+      height: 100%;
+      padding: 10px 5px 0 5px;
+      background: #fff;
+      border: 1px solid #ccc;
+      :global {
+        .ant-input[disabled] {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  // position: absolute;
+  // left: 50%;
+  // transform: translate(-50%);
+  // top: 20px;
+  // border: none;
+  // height: 30px;
+  // border-radius: 100px;
+  // padding: 5px 10px;
+  // color: #ddd;
+  // background: #fff;
+  // font-weight: 700;
+
+  :global {
+    .bjs-container {
+      .djs-context-pad {
+        color: #40a9ff;
+      }
+      .djs-container {
+        .bjsl-button {
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          height: 30px;
+          padding: 5px 10px;
+          font-weight: 700;
+          border: none;
+          border-radius: 100px;
+          transform: translate(-50%);
+          pointer-events: none;
+          &:focus {
+            outline: none;
+          }
+        }
+        .bjsl-button-inactive {
+          color: #ddd;
+          background: #fff;
+        }
+        .bjsl-button-error {
+          color: #fff;
+          background-color: #c30;
+        }
+        .bjsl-button-success {
+          color: #fff;
+          background-color: #52b415;
+        }
+        .bjsl-button-warning {
+          color: #fff;
+          background-color: #dfe630;
+        }
+        .bjsl-icon {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          line-height: 23px;
+          text-align: center;
+          background: #fff;
+          border-radius: 100%;
+        }
+        .bjsl-icon-error {
+          color: #fff;
+          background-color: #c30;
+        }
+        .bjsl-icon-warning {
+          background-color: rgb(247, 243, 42);
+        }
+        .bjsl-dropdown {
+          position: absolute;
+          display: none;
+        }
+        .bjsl-dropdown-content {
+          position: absolute;
+          min-width: 260px;
+          height: fit-content;
+        }
+        .bjsl-issues {
+          padding: 8px;
+          color: #444;
+          font-size: 12px;
+          font-family: Arial, sans-serif;
+          background: #fafafa;
+          border: 1px solid #ccc;
+          border-radius: 2px;
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+          }
+          .error {
+            svg {
+              color: #c30;
+            }
+          }
+          a {
+            margin-left: 8px;
+            color: #444;
+          }
+        }
+        .bjsl-issues-top-right {
+          .bjsl-dropdown {
+            top: 0;
+            left: 0;
+          }
+          .bjsl-dropdown-content {
+            bottom: 0;
+            left: 0;
+            padding-bottom: 5px;
+          }
+        }
+        .bjsl-overlay {
+          &:hover {
+            .bjsl-dropdown {
+              display: block;
+            }
+          }
+        }
+        .djs-minimap {
+          position: absolute;
+          right: 10px;
+          bottom: 20px;
+          box-sizing: border-box;
+          overflow: hidden;
+          background-color: hsla(0, 0%, 100%, 0.9);
+          border: 1px solid #ccc;
+          border-radius: 2px;
+          .map {
+            width: 250px;
+            height: 150px;
+          }
+          .viewport-dom {
+            position: absolute;
+            bottom: 13.1508px;
+            box-sizing: border-box;
+            border: 2px solid orange;
+            border-radius: 2px;
+            cursor: move;
+          }
+          .viewport {
+            fill: none;
+            stroke: none;
+          }
+        }
+      }
+    }
+  }
+}
+.xmlView {
+  height: 600px;
+  :global {
+    .CodeMirror-lines {
+      font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+    }
+    .cm-s-default .cm-tag {
+      color: #50c517;
+      font-weight: 600;
+    }
+    .cm-s-default .cm-attribute {
+      color: #00c;
+    }
+  }
+}
+.editToolContainer {
+  height: 50px;
+  padding-left: 25px;
+  background: #fff;
+}
